@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <title>Workouts</title>
+  
+</head>
+
+<body>
+    <div class="container-fluid" id="container-div">
+        <h2>Add Workout:</h2>
+        <form id="post-form">
+            <label for="name">Name of Exercise<span class="asterisk">*</span>: </label>
+            <input type="text" name="name" placeholder="lunges" id="name-input" required>
+            <label for="reps">Reps: </label>
+            <input type="number" name="reps" placeholder="30" id="reps-input">
+            <label for="weight">Weight: </label>
+            <input type="number" name="weight" placeholder="15" id="weight-input">
+
+            <label for="unit">Unit<span class="asterisk">*</span>: </label>
+            <input type="radio" name="unit" id="unit-input1" value="0" required> 
+            <label for="unit" class="units">lbs </label>
+            <input type="radio" name="unit" id="unit-input2" value="1"> 
+            <label for="unit" class="units">kg </label>
+
+            <label for="date">Date<span class="asterisk">*</span>: </label>
+            <input type="date" name="date" placeholder="Date" id="date-input" required>
+            <input type="submit" value="Submit" id="post-button" class="btn btn-success">
+        </form>
+        <p><span class="asterisk">*required</span></p>
+
+        <h1 class="display-2">Workouts</h1>
+        <!-- <button id="reset-button" class="btn btn-danger">Reset Table</button> -->
+
+        <form id="update-form">
+            <h2>Update Workout:</h2>
+            <input type="number" name="id" id="update-id" class="hidden">
+            <label for="name">Name of Exercise<span class="asterisk">*</span>: </label>
+            <input type="text" name="name" id="update-name" required>
+            <label for="reps">Reps: </label>
+            <input type="number" name="reps" id="update-reps">
+            <label for="weight">Weight: </label>
+            <input type="number" name="weight" id="update-weight">
+
+            <label for="unit">Unit<span class="asterisk">*</span>: </label>
+            <input type="radio" name="update-unit" id="update-unit-input1" value="0" required>  
+            <label for="unit" class="units">lbs </label>
+            <input type="radio" name="update-unit" id="update-unit-input2" value="1"> 
+            <label for="unit" class="units">kg </label>
+
+            <label for="date">Date<span class="asterisk">*</span>: </label>
+            <input type="date" name="date" id="update-date" required>
+            <input type="submit" value="Submit" id="update-button" class="btn btn-success">
+            <p><span class="asterisk">*required</span></p>
+        </form>
+        
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

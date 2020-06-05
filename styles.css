@@ -1,0 +1,28 @@
+.hidden {
+    display: none;
+}
+
+
+table {
+    margin-top: 20px;
+}
+
+#update-form {
+    display: none;
+    padding: 10px 0;
+    color: #007bff
+
+}
+
+h2 {
+    padding-top: 20px;
+}
+
+.units {
+    color: black;
+}
+
+.asterisk {
+    color: red;
+    font-style: italic;
+}
