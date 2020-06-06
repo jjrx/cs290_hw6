@@ -143,7 +143,7 @@ function editData(contentToUpdate) {
     document.getElementById('update-weight').value = contentToUpdate[3];
     // check which unit was selected
     // 'update-unit-input1' = lbs = 0; 'update-unit-input2' = kgs = 1
-    if (contentToUpdate[4] == 0) {
+    if (contentToUpdate[4] == 'lbs') {
         document.getElementById('update-unit-input1').checked = true;
     } else {
         document.getElementById('update-unit-input2').checked = true;
@@ -203,6 +203,13 @@ function generate_table(data) {
         if (property == "date" && data[i][property] != "0000-00-00") {
             var text = new Date(data[i][property]);
             text = text.toISOString().substring(0, 10);
+        // units are stored as booleans in database => convert to text to display in table
+        } else if (property == "unit") {
+            if (data[i][property] == 0) {
+                text = 'lbs';
+            } else {
+                text = 'kg';
+            }
         } else {
             var text = data[i][property];
         }
